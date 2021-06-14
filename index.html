@@ -24,10 +24,46 @@
         <div class="form-row mt-2">
             <div class="col-auto ms-number">
                 <label class="mr-1" for="number">Number:</label>
-                <input type="text" class="form-control form-control-sm d-inline-block" name="number" id="number" style="width: 500px;" value="item-x-z, item2, item3-m-z">
-                <i class="oi oi-plus"></i>
+                <input type="text" class="form-control form-control-sm d-inline-block" name="number" id="number" style="width: 500px;">
+                <i class="oi oi-plus" data-toggle="modal" data-target="#dlg-sr-move-stock"></i>
             </div>
         </div>
     </form>
+    <div id="dlg-sr-move-stock" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Example modal.</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-row source-list d-flex align-items-center">
+                        <div class="d-flex flex-column mr-2">
+                            <input type="text" id="filter-input" />
+                            <ul id="sortable1" class="connectedSortable">
+                            </ul>
+                        </div>    
+                        <div class="d-flex mr-2">
+                            <span id="left-move">
+                                <
+                            </span>
+                            <span id="right-move">
+                                >
+                            </span>
+                        </div>
+                        <ul id="sortable2" class="connectedSortable">
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info btn-sm btn-move-stock">Okay</button>
+                    <button type="button" class="btn btn-secondary btn-sm modal-close" data-dismiss="modal">Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
